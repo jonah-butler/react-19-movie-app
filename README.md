@@ -10,7 +10,7 @@
 
 ## Summary
 
-A small React 19 application that uses [TMDB](https://www.themoviedb.org/) api to browse movies.
+A small React 19 with Vite application that uses [TMDB](https://www.themoviedb.org/) api to browse movies.
 
 It includes:
 
