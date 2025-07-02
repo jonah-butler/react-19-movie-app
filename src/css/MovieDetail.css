@@ -1,0 +1,158 @@
+.movie-backdrop-wrapper {
+  max-width: 1100px;
+  min-height: 500px;
+  margin: 0 auto;
+}
+
+.movie-backdrop {
+  width: 100%;
+  max-height: 700px;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  min-height: 300px;
+}
+
+.movie-backdrop img {
+  width: 100%;
+  display: block;
+  height: auto;
+  max-height: 600px;
+  object-fit: cover;
+}
+
+.movie-backdrop p {
+  margin-top: 1rem;
+}
+
+.movie-details-container {
+  display: flex;
+  gap: 1rem;
+}
+
+.movie-poster-column1 {
+  flex: 1;
+}
+.movie-poster-column1 img {
+  max-width: 350px;
+  border-radius: 5px;
+}
+
+.movie-poster-placeholder {
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  width: 350px;
+  height: 525px;
+}
+
+.movie-details-column2 {
+  flex: 2;
+}
+
+.movie-details-column2 h1 {
+  text-shadow: 5px 5px 8px rgba(0, 0, 0, 1);
+}
+
+.movie-details-row {
+  display: flex;
+  align-items: center;
+}
+
+.movie-date {
+  font-weight: 200;
+  margin-left: 10px;
+}
+
+.movie-tagline {
+  font-weight: 400;
+  font-size: 14px;
+  padding-top: 1rem;
+  font-style: italic;
+  color: white;
+}
+
+.movie-overview {
+  padding-top: 1rem;
+  font-size: 18px;
+}
+
+.movie-recommendations-container {
+  margin-top: 3rem;
+}
+
+.movie-backdrop-overlay {
+  width: 100%;
+  position: absolute;
+  height: calc(100% + 100px);
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(
+      to right,
+      #242424,
+      rgba(36, 36, 36, 0.984) 0.97%,
+      rgba(36, 36, 36, 0.945) 2.08%,
+      rgba(36, 36, 36, 0.882) 3.3%,
+      rgba(36, 36, 36, 0.804) 4.6%,
+      rgba(36, 36, 36, 0.71) 5.97%,
+      rgba(36, 36, 36, 0.608),
+      rgba(36, 36, 36, 0.5),
+      rgba(36, 36, 36, 0.396) 10.16%,
+      rgba(36, 36, 36, 0.294) 11.51%,
+      rgba(36, 36, 36, 0.204) 12.78%,
+      rgba(36, 36, 36, 0.12) 13.96%,
+      rgba(36, 36, 36, 0.06) 15.02%,
+      rgba(36, 36, 36, 0.016) 15.93%,
+      rgba(36, 36, 36, 0) 16.67%,
+      rgba(36, 36, 36, 0) 83.33%,
+      rgba(36, 36, 36, 0.016) 84.07%,
+      rgba(36, 36, 36, 0.06) 84.98%,
+      rgba(36, 36, 36, 0.12) 86.04%,
+      rgba(36, 36, 36, 0.204) 87.22%,
+      rgba(36, 36, 36, 0.294) 88.5%,
+      rgba(36, 36, 36, 0.396) 89.84%,
+      rgba(36, 36, 36, 0.5),
+      rgba(36, 36, 36, 0.608),
+      rgba(36, 36, 36, 0.71) 94.03%,
+      rgba(36, 36, 36, 0.804) 95.4%,
+      rgba(36, 36, 36, 0.882) 96.7%,
+      rgba(36, 36, 36, 0.945) 97.92%,
+      rgba(36, 36, 36, 0.984) 99.03%,
+      #242424
+    ),
+    linear-gradient(
+      to top,
+      #242424,
+      #242424 21.48%,
+      rgba(36, 36, 36, 0.984) 23.64%,
+      rgba(36, 36, 36, 0.945) 26.1%,
+      rgba(36, 36, 36, 0.882) 28.81%,
+      rgba(36, 36, 36, 0.804) 31.71%,
+      rgba(36, 36, 36, 0.71) 34.74%,
+      rgba(36, 36, 36, 0.608),
+      rgba(36, 36, 36, 0.5) 40.97%,
+      rgba(36, 36, 36, 0.396) 44.06%,
+      rgba(36, 36, 36, 0.294) 47.05%,
+      rgba(36, 36, 36, 0.204) 49.88%,
+      rgba(36, 36, 36, 0.12) 52.5%,
+      rgba(36, 36, 36, 0.06) 54.85%,
+      rgba(36, 36, 36, 0.016) 56.88%,
+      rgba(36, 36, 36, 0) 58.52%
+    );
+}
+
+.loading {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.error {
+  padding: 2rem;
+  text-align: center;
+  padding: 4rem 2rem;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  margin: 2rem auto;
+  max-width: 600px;
+  color: red;
+}
