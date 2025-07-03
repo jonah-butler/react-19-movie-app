@@ -3,7 +3,7 @@ import { type Movie } from '../services/movies.types';
 
 interface MovieContextDef {
   favorites: Movie[];
-  watchList: Movie[];
+  watched: Movie[];
   addToFavorites: (movie: Movie) => void;
   removeFromFavorites: (movieId: number) => void;
   isFavorite: (movieId: number) => boolean;

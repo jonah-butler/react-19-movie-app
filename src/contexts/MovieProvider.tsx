@@ -4,7 +4,7 @@ import { MovieContext } from './MovieContext';
 
 export const MovieProvider = ({ children }: { children: React.ReactNode }) => {
   const [favorites, setFavorites] = useState<Movie[]>([]);
-  const [watchList, setWatchList] = useState<Movie[]>([]);
+  const [watched, setWatched] = useState<Movie[]>([]);
 
   useEffect(() => {
     const storedFavorites = localStorage.getItem('favoriteMovies');
@@ -16,7 +16,7 @@ export const MovieProvider = ({ children }: { children: React.ReactNode }) => {
 
     if (!storedWatchList) return;
 
-    setWatchList(JSON.parse(storedWatchList));
+    setWatched(JSON.parse(storedWatchList));
   }, []);
 
   useEffect(() => {
@@ -24,19 +24,19 @@ export const MovieProvider = ({ children }: { children: React.ReactNode }) => {
   }, [favorites]);
 
   useEffect(() => {
-    localStorage.setItem('watchedMovies', JSON.stringify(watchList));
-  }, [watchList]);
+    localStorage.setItem('watchedMovies', JSON.stringify(watched));
+  }, [watched]);
 
   const addToWatchList = (movie: Movie): void => {
-    setWatchList((prev) => [...prev, movie]);
+    setWatched((prev) => [...prev, movie]);
   };
 
   const removeFromWatchList = (movieId: number): void => {
-    setWatchList((prev) => prev.filter((movie) => movie.id !== movieId));
+    setWatched((prev) => prev.filter((movie) => movie.id !== movieId));
   };
 
   const isWatched = (movieId: number): boolean => {
-    return watchList.some((movie) => movie.id === movieId);
+    return watched.some((movie) => movie.id === movieId);
   };
 
   const addToFavorites = (movie: Movie): void => {
@@ -59,7 +59,7 @@ export const MovieProvider = ({ children }: { children: React.ReactNode }) => {
     addToWatchList,
     removeFromWatchList,
     isWatched,
-    watchList,
+    watched,
   };
 
   return (

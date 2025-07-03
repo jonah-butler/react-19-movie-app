@@ -5,18 +5,18 @@ import '../css/Favorites.css';
 
 function Favorites() {
   const navigate = useNavigate();
-  const { watchList } = useMovieContext();
+  const { watched } = useMovieContext();
 
   const navigateToMovie = (movieId: number): void => {
     navigate(`/movie/${movieId}`);
   };
 
-  if (watchList.length) {
+  if (watched.length) {
     return (
       <div className="favorites-wrapper">
-        <h2 className="favorites">Watch List</h2>
+        <h2 className="favorites">Watched</h2>
         <div className="movies-grid">
-          {watchList.map((movie) => (
+          {watched.map((movie) => (
             <MovieCard
               onClick={() => navigateToMovie(movie.id)}
               movie={movie}

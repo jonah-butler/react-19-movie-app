@@ -5,7 +5,7 @@ import './css/App.css';
 import Favorites from './pages/Favorites';
 import Home from './pages/Home';
 import MovieDetail from './pages/MovieDetail';
-import WatchList from './pages/WatchList';
+import Watched from './pages/Watched';
 
 function App() {
   return (
@@ -16,7 +16,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/favorites" element={<Favorites />} />
-            <Route path="/watch-list" element={<WatchList />} />
+            <Route path="/watch-list" element={<Watched />} />
             <Route path="/movie/:movieId" element={<MovieDetail />} />
           </Routes>
         </main>
